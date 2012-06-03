@@ -38,6 +38,8 @@
 		1AB73C7115787B5B00D3E141 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB73C7015787B5B00D3E141 /* MainViewController.m */; };
 		1AB73C7315787B5B00D3E141 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AB73C7215787B5B00D3E141 /* MainViewController.xib */; };
 		1AB73C7715787B5B00D3E141 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = 1AB73C7615787B5B00D3E141 /* verify.sh */; };
+		1AB73C7E157880A900D3E141 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1AB73C7D157880A900D3E141 /* www */; };
+		1AB73C801578866C00D3E141 /* reset.css in Resources */ = {isa = PBXBuildFile; fileRef = 1AB73C7F1578866C00D3E141 /* reset.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,10 +57,10 @@
 		1AB73C3915787B5A00D3E141 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1AB73C3B15787B5A00D3E141 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1AB73C3D15787B5A00D3E141 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		1AB73C4115787B5A00D3E141 /* tweats-Info.plist */ = {isa = PBXFileReference; path = "tweats-Info.plist"; sourceTree = "<group>"; };
+		1AB73C4115787B5A00D3E141 /* tweats-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tweats-Info.plist"; sourceTree = "<group>"; };
 		1AB73C4315787B5A00D3E141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AB73C4515787B5A00D3E141 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1AB73C4715787B5A00D3E141 /* tweats-Prefix.pch */ = {isa = PBXFileReference; path = "tweats-Prefix.pch"; sourceTree = "<group>"; };
+		1AB73C4715787B5A00D3E141 /* tweats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tweats-Prefix.pch"; sourceTree = "<group>"; };
 		1AB73C4815787B5A00D3E141 /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = /Users/Shared/Cordova/Frameworks/Cordova.framework; sourceTree = "<absolute>"; };
 		1AB73C4D15787B5A00D3E141 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1AB73C5115787B5A00D3E141 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -71,13 +73,15 @@
 		1AB73C6515787B5B00D3E141 /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x~iphone.png"; path = "Resources/splash/Default@2x~iphone.png"; sourceTree = "<group>"; };
 		1AB73C6715787B5B00D3E141 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		1AB73C6915787B5B00D3E141 /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
-		1AB73C6C15787B5B00D3E141 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		1AB73C6C15787B5B00D3E141 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		1AB73C6D15787B5B00D3E141 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		1AB73C6F15787B5B00D3E141 /* MainViewController.h */ = {isa = PBXFileReference; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		1AB73C6F15787B5B00D3E141 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
 		1AB73C7015787B5B00D3E141 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		1AB73C7215787B5B00D3E141 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
-		1AB73C7515787B5B00D3E141 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		1AB73C7515787B5B00D3E141 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		1AB73C7615787B5B00D3E141 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
+		1AB73C7D157880A900D3E141 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		1AB73C7F1578866C00D3E141 /* reset.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = reset.css; path = www/reset.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 		1AB73C1315787B5A00D3E141 = {
 			isa = PBXGroup;
 			children = (
+				1AB73C7F1578866C00D3E141 /* reset.css */,
+				1AB73C7D157880A900D3E141 /* www */,
 				1AB73C3F15787B5A00D3E141 /* tweats */,
 				1AB73C2415787B5A00D3E141 /* Frameworks */,
 				1AB73C2215787B5A00D3E141 /* Products */,
@@ -329,6 +335,8 @@
 				1AB73C6A15787B5B00D3E141 /* Cordova.plist in Resources */,
 				1AB73C7315787B5B00D3E141 /* MainViewController.xib in Resources */,
 				1AB73C7715787B5B00D3E141 /* verify.sh in Resources */,
+				1AB73C7E157880A900D3E141 /* www in Resources */,
+				1AB73C801578866C00D3E141 /* reset.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +550,7 @@
 				1AB73C7C15787B5B00D3E141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

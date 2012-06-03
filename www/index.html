@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width; height=device-height; user-scalable=no" />
+            
+        <!-- iPad/iPhone specific css below, add after your main css >
+         <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+         <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />	
+         -->
+		<link rel="stylesheet" href="reset.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="app.css" type="text/css" media="screen" />
+
+        <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+        <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript">
+            // If you want to prevent dragging, uncomment this section
+            /*
+            function preventBehavior(e) 
+            { 
+             e.preventDefault(); 
+            };
+            document.addEventListener("touchmove", preventBehavior, false);
+            */
+
+            /* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+            see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+            for more details -jm */
+            /*
+            function handleOpenURL(url)
+            {
+             // TODO: do something with the url passed in.
+            }
+            */
+            
+            function loader() {
+                var state = document.readyState;
+                if (state == 'loaded' || state == 'complete') {
+                    locate();
+                } else {
+                    if (navigator.userAgent.indexOf('Browzr') > -1) {
+                        setTimeout(run, 250);
+                    } else {
+                        document.addEventListener('deviceready', locate, false);
+                    }
+                }
+            }
+            
+            /* When this function is called, Cordova has been initialized and is ready to roll */
+            /* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+             see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+             for more details -jm */
+            
+            function locate () {
+                var win = function (position) {
+                    var lat = position.coords.latitude;
+                    var long = position.coords.longitude;
+                    var point = new google.maps.LatLng(lat, long);
+                    var map_element = document.getElementById("map_canvas");
+                    var config = {
+                        center: point,
+                        zoom: 16,
+                        mapTypeId: google.maps.MapTypeId.HYBRID
+                    };
+                    
+                    var marker1 = new google.maps.Marker({
+						position: point,
+						title: "Truck Stop" 
+					});
+              
+                    map = new google.maps.Map(map_element, config);
+                    
+                    marker1.setMap(map);
+
+					var tooltip ="<h3 class='test'><a href='http://en.wikipedia.org/wiki/Chicago,_Illinois'"
+					+" target='_blank'>Chicago, Illinois</a></h3><div>"
+					+"</div><div>Chicago is the largest city in the U.S. state of Illinois.</div>";
+					
+					// add an infowindow
+					var chInfoWindow = new google.maps.InfoWindow({
+						content: tooltip,
+						maxWidth: 250,
+						disableAutoPan: false,
+						zIndex: null,
+						boxStyle: { 
+						  	background: '#333',
+							opacity: 0.75,
+							width: '250px'
+						},
+						closeBoxMargin: '10px 2px 2px 2px',
+						closeBoxURL: 'http://www.google.com/intl/en_us/mapfiles/close.gif',
+						infoBoxClearance: new google.maps.Size(1, 1),
+						isHidden: false,
+						pane: "floatPane",
+						enableEventPropagation: false
+					});
+					//open infowindow on click event on marker.
+					google.maps.event.addListener(marker1, 'click', function() {
+						chInfoWindow.open(map, marker1);
+					});
+                    
+                    /*
+                    var element = document.getElementById('geolocation');
+                    element.innerHTML = 'Latitude: ' + position.coords.latitude    + '<br />' +
+                    'Longitude: '          + position.coords.longitude             + '<br />' +
+                    'Altitude: '           + position.coords.altitude              + '<br />' +
+                    'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                    'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                    'Heading: '            + position.coords.heading               + '<br />' +
+                    'Speed: '              + position.coords.speed                 + '<br />' +
+                    'Timestamp: '          + new Date(position.timestamp)          + '<br />';
+                    */
+                };
+                
+                var fail = function(e) {
+                    alert('Can\'t retrieve position.\nError: ' + e);
+                };
+                
+                watchID = navigator.geolocation.getCurrentPosition(win, fail);
+            }
+
+        </script>
+    </head>
+    <body onload="loader()">
+        <div id="header">
+            <h1>Tweats LA</h1>
+            <p>Search</p>
+        </div>
+        <ul id="nav">
+            <li id="distance">
+				<strong>distance</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+            </li>
+            <li id="time">
+            	<strong>time</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+            </li>
+            <li id="find">
+            	<strong>find</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+            </li>
+			<li id="profile">
+				<strong>profile</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+			</li>
+        </ul>
+        <div id="map_canvas"></div>
+        <div id="geolocation"></div>
+    </body>
+</html>
