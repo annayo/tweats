@@ -16,12 +16,50 @@
         <!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         <script type="text/javascript" charset="utf-8" src="app.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     </head>
-    <body class="landing">
+    <body onload="loader()">
         <div id="header">
             <h1>Tweats LA</h1>
+            <form action="#" id="search">
+				<input type="text" placeholder="Current Location" />
+			</form>
         </div>
-        <a class="cta" id="find" href="map.html"><strong>What's near me?</strong></a>
-		<a class="cta" id="login" href="#"><strong>Sign in using Twitter</strong></a>
+        <ul id="nav">
+            <li class="option" id="distance">
+				<strong>distance</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+            </li>
+            <li class="option" id="time">
+            	<strong>time</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+            </li>
+            <li class="option" id="find">
+            	<strong>find</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+            </li>
+			<li class="option" id="profile">
+				<strong>profile</strong>
+            	<ul>
+					<li>test</li>
+					<li>test</li>
+					<li>test</li>
+				</ul>
+			</li>
+        </ul>
+        <div id="map_canvas"></div>
+        <div id="geolocation"></div>
     </body>
 </html>

@@ -1,9 +1,50 @@
 html, body { margin: 0; padding: 0; border: 0; }
 
-#header,
-#nav { background: #fff; position: relative; z-index: 2; }
-.test { font-style: italic;}
-#nav {}
-#nav li { background: #4EA6E0; box-sizing: border-box; float: left; padding: 10px; width: 80px; }
+body { font-family: helvetica, arial, sans-serif; font-size: 62.5%; }
 
-#map_canvas { width: 100%; height: 460px; left: 0; position: absolute; top: 0; z-index: 1; box-sizing: border-box; }
+#header,
+#nav { position: relative; z-index: 2; }
+
+h1,
+.cta strong,
+#nav .option strong { background-image: url(images/bkg.sprite.gif); background-repeat: no-repeat; text-indent: -9999px; }
+
+h1,
+.cta,
+#map_canvas,
+#search input,
+#nav .option {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+#find { background-position: ; }
+#login { background-position: ; }
+
+#header { background: #000; height: 31px; padding: 8px 7px 5px }
+h1 { background-position: 0 -161px; float: left; height: 29px; margin: 0 auto; width: 119px; }
+
+.landing #header { height: auto; padding: 25px; }
+.landing h1 { background-position: 0 0; float: none; height: 109px; width: 258px; }
+.landing .cta { background: #fff; border: 1px solid #4f91a7; display: block; margin: 15px auto 0; padding: 23px; width: 95%; }
+.landing .cta strong { display: block; margin: 0 auto; }
+.landing #find strong { background-position: 0 -110px; height: 18px; width: 222px; }
+.landing #login strong { background-position: 0 -128px; height: 32px; width: 261px; }
+		
+#search { float: right; width: 155px; }
+#search input { border: 1px solid #94a2b4; height: 27px; padding: 3px; width: 153px; }
+
+#nav { background: #fff; }
+#nav .option { background: #8edcef; box-sizing: border-box; float: left; height: 40px; position: relative; width: 25%; }
+#nav .option strong { display: block; margin: 0 auto; }
+#nav #distance strong { background-position: -274px -112px; height: 21px; margin-top: 9px; width: 15px; }
+#nav #time strong { background-position: -273px -39px; height: 16px; margin-top: 11px; width: 16px; }
+#nav #find strong { background-position: -272px -75px; height: 17px; margin-top: 11px; width: 17px; }
+#nav #profile strong { background-position: -271px 0; height: 19px; margin-top: 10px; width: 18px; }
+
+#nav ul { display: none; left: 0; position: absolute; top: 30px; }
+
+#nav .option.active ul { display: block; }
+
+#map_canvas { width: 100%; height: 375px; left: 0; position: absolute; top: 84px; z-index: 1; }
